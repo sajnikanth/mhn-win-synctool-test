@@ -1,0 +1,95 @@
+﻿<testsuite
+name="mhn-win-synctool-test"
+rxversion="5.4.1.25490"
+id="bd46276c-1745-4a2d-9e02-a49cc5ea42ee"
+reportfilename="%S_%Y%M%D_%T.rxlog"
+reporttemplatefolder=""
+reportxslfilename=""
+placescreenshotsinfolder="True"
+ReportTime="RelativeToTestSuiteStartTime"
+reportwriteinterval="30000ms"
+reportcompress="False"
+enabletracingscreenshots="True"
+TracingScreenshotMode="Foreground"
+TracingScreenshotQuality="40"
+reportlevel="Info;20">
+	<datasources>
+		<dataConnector
+		name="test_data"
+		type="Ranorex.Core.Data.SimpleDataConnector"
+		id="93165021-78be-4e0d-add2-9e41e6fc6833"
+		lastknownrowcount="1">
+			<lastknowncolumns>
+				<column>
+					username
+				</column>
+				<column>
+					password
+				</column>
+			</lastknowncolumns>
+			<maskedcolumns/>
+			<table>
+				<tr>
+					<th>
+						username
+					</th>
+					<th>
+						password
+					</th>
+				</tr>
+				<tr>
+					<td>
+						20150922@isai.cc
+					</td>
+					<td>
+						ten20304050
+					</td>
+				</tr>
+			</table>
+		</dataConnector>
+	</datasources>
+	<content>
+		<testcase
+		name="test_login_logout_exit"
+		id="12f62142-64ee-4b7a-a345-a56a8eca5ee0"
+		datasource="test_data">
+			<testmodule
+			name="Login"
+			id="fd02b067-6d8f-4d0e-969f-e73fb9bbaffd"
+			ref="3bafe94b-55bf-4ec1-92c8-41a4887f16bb"
+			type="Recording">
+				<databinding>
+					<var
+					variablename="var_username"
+					variableid="a0f03df3-73b9-4d92-82ea-916f9af644af"
+					dataname="username"
+					datasourceid="93165021-78be-4e0d-add2-9e41e6fc6833"/>
+					<var
+					variablename="var_password"
+					variableid="b9eb6b76-89eb-42b4-a1aa-a6c83f8e2ccd"
+					dataname="password"
+					datasourceid="93165021-78be-4e0d-add2-9e41e6fc6833"/>
+				</databinding>
+			</testmodule>
+			<testmodule
+			name="Logout"
+			id="3a62022c-c259-4aec-9924-dc63643d6eea"
+			ref="f8365668-f91e-4af0-9f5d-f829e7547682"
+			type="Recording"/>
+			<testmodule
+			name="Exit"
+			id="3b793ee6-b2e4-4992-bece-a8c8c6319742"
+			ref="b61ebc43-3756-4592-b873-2b9f34c82253"
+			type="Recording"/>
+		</testcase>
+	</content>
+	<testconfigurations
+	default="TestRun">
+		<testconfiguration
+		name="TestRun">
+			<testcase
+			id="12f62142-64ee-4b7a-a345-a56a8eca5ee0"/>
+		</testconfiguration>
+	</testconfigurations>
+	<references/>
+</testsuite>

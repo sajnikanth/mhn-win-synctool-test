@@ -1,0 +1,144 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{A35F98E6-41B2-4AB4-8B99-CE64730169EC}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>mhn_win_synctool_test</RootNamespace>
+    <AssemblyName>mhn-win-synctool-test</AssemblyName>
+    <RanorexVersion>5</RanorexVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <projectdefaultrepository>e66aa3ff-42ba-487e-b2f8-8fb2c52b5e28</projectdefaultrepository>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <Optimize>False</Optimize>
+    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>False</DebugSymbols>
+    <DebugType>None</DebugType>
+    <Optimize>True</Optimize>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <DefineConstants>TRACE</DefineConstants>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.Targets" />
+  <ItemGroup>
+    <Reference Include="Ranorex.Core, Version=$(RanorexVersion)" />
+    <Reference Include="Ranorex.Plugin.ChromeWeb, Version=$(RanorexVersion)" />
+    <Reference Include="Ranorex.Plugin.Flex, Version=$(RanorexVersion)" />
+    <Reference Include="Ranorex.Plugin.Java, Version=$(RanorexVersion)" />
+    <Reference Include="Ranorex.Plugin.Mobile, Version=$(RanorexVersion)" />
+    <Reference Include="Ranorex.Plugin.MozillaWeb, Version=$(RanorexVersion)" />
+    <Reference Include="Ranorex.Plugin.Msaa, Version=$(RanorexVersion)" />
+    <Reference Include="Ranorex.Plugin.Office, Version=$(RanorexVersion)" />
+    <Reference Include="Ranorex.Plugin.Qt, Version=$(RanorexVersion)" />
+    <Reference Include="Ranorex.Plugin.RawText, Version=$(RanorexVersion)" />
+    <Reference Include="Ranorex.Plugin.Sap, Version=$(RanorexVersion)" />
+    <Reference Include="Ranorex.Plugin.Uia, Version=$(RanorexVersion)" />
+    <Reference Include="Ranorex.Plugin.Web, Version=$(RanorexVersion)" />
+    <Reference Include="Ranorex.Plugin.Win32, Version=$(RanorexVersion)" />
+    <Reference Include="Ranorex.Plugin.WinForms, Version=$(RanorexVersion)" />
+    <Reference Include="Ranorex.Plugin.Wpf, Version=$(RanorexVersion)" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <id>7ae1627d-9810-49ee-a104-0e014874beb9</id>
+    </Compile>
+    <Compile Include="exit.cs">
+      <BoundTo>6bc45d2b-52e5-41a2-a2f1-429b051895ca</BoundTo>
+      <DependentUpon>exit.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>d6a9e070-12f4-48c9-8554-59c4030973ef</id>
+    </Compile>
+    <Compile Include="exit.UserCode.cs">
+      <BoundTo>6bc45d2b-52e5-41a2-a2f1-429b051895ca</BoundTo>
+      <DependentUpon>exit.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>357cba41-b0f4-4525-81c0-5b0389c5763b</id>
+    </Compile>
+    <Compile Include="logout.cs">
+      <BoundTo>edb0b15a-3fb0-4357-aba9-cc69ea7a0627</BoundTo>
+      <DependentUpon>logout.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>5a043d6d-b375-4f4f-b812-995a5c0e94ea</id>
+    </Compile>
+    <Compile Include="logout.UserCode.cs">
+      <BoundTo>edb0b15a-3fb0-4357-aba9-cc69ea7a0627</BoundTo>
+      <DependentUpon>logout.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>24a68c69-4fd6-438c-ab69-b61f7ff491d8</id>
+    </Compile>
+    <Compile Include="mhn-win-synctool-testRepository.cs">
+      <BoundTo>e66aa3ff-42ba-487e-b2f8-8fb2c52b5e28</BoundTo>
+      <DependentUpon>mhn-win-synctool-testRepository.rxrep</DependentUpon>
+      <RepositoryCode>true</RepositoryCode>
+      <id>24faead1-e925-41e9-8466-aa21d21d9b37</id>
+    </Compile>
+    <Compile Include="Program.cs">
+      <id>f9a85ed0-c91f-4808-8e75-4371dcb2e22d</id>
+    </Compile>
+    <Compile Include="login.cs">
+      <BoundTo>2ffb0993-10a5-47d6-9838-b772f89b48f6</BoundTo>
+      <DependentUpon>login.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>a66163e1-5b17-4995-8070-af4ba448cc63</id>
+    </Compile>
+    <Compile Include="login.UserCode.cs">
+      <BoundTo>2ffb0993-10a5-47d6-9838-b772f89b48f6</BoundTo>
+      <DependentUpon>login.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>a19b1a70-0c72-4931-aba5-0aed65355e55</id>
+    </Compile>
+    <None Include="app.config">
+      <id>6bd4324d-a95e-4ed0-a4ae-074e96847dfa</id>
+    </None>
+    <None Include="exit.rxrec">
+      <BoundTo>e66aa3ff-42ba-487e-b2f8-8fb2c52b5e28</BoundTo>
+      <id>6bc45d2b-52e5-41a2-a2f1-429b051895ca</id>
+      <recordtableid>b61ebc43-3756-4592-b873-2b9f34c82253</recordtableid>
+    </None>
+    <None Include="logout.rxrec">
+      <BoundTo>e66aa3ff-42ba-487e-b2f8-8fb2c52b5e28</BoundTo>
+      <id>edb0b15a-3fb0-4357-aba9-cc69ea7a0627</id>
+      <recordtableid>f8365668-f91e-4af0-9f5d-f829e7547682</recordtableid>
+    </None>
+    <None Include="mhn-win-synctool-testRepository.rximg">
+      <BoundTo>e66aa3ff-42ba-487e-b2f8-8fb2c52b5e28</BoundTo>
+      <DependentUpon>mhn-win-synctool-testRepository.rxrep</DependentUpon>
+      <imageblob>true</imageblob>
+      <id>a4d7e6f8-d8ee-441a-a7c5-50aeeae763be</id>
+    </None>
+    <None Include="mhn-win-synctool-testRepository.rxrep">
+      <id>e66aa3ff-42ba-487e-b2f8-8fb2c52b5e28</id>
+      <repoid>7a3c3df5-3838-4cb3-99a3-6e552cdd501f</repoid>
+      <reporootid>24365fec-fe6f-4847-b97b-ba176bb6a424</reporootid>
+    </None>
+    <None Include="login.rxrec">
+      <BoundTo>e66aa3ff-42ba-487e-b2f8-8fb2c52b5e28</BoundTo>
+      <id>2ffb0993-10a5-47d6-9838-b772f89b48f6</id>
+      <recordtableid>3bafe94b-55bf-4ec1-92c8-41a4887f16bb</recordtableid>
+    </None>
+    <Content Include="mhn-win-synctool-test.rxtmg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <id>a73c3a39-7a37-4f65-9589-d74b4acbdcf1</id>
+    </Content>
+    <Content Include="mhn-win-synctool-test.rxtst">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <id>dae08a4b-b123-4e96-bf9c-cd48cfde3937</id>
+    </Content>
+  </ItemGroup>
+  <Import Condition="Exists('$(MSBuildExtensionsPath)\Ranorex$(RanorexVersion)\Ranorex.MSBuild.Targets')" Project="$(MSBuildExtensionsPath)\Ranorex$(RanorexVersion)\Ranorex.MSBuild.Targets" />
+</Project>
